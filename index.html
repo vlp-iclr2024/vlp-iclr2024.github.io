@@ -50,7 +50,7 @@
                 <b><font size="+6">Video Language Planning</font></b></br> 
             </h2>
         </div>
-        
+
 
         <div class="row justify-content-md-center">
             <div class="col-md-10 col-lg-8">
@@ -75,7 +75,9 @@ compared to prior methods on both simulated and real robots (across 3 hardware
 platforms).
                 </p>
                 <p style="text-align:center;">
-                    <image src="img/share_image.png" width="100%">
+                    <video id="v0" width="100%" preload="metadata" playsinline muted loop autoplay>
+                        <source src="videos/tree_main.mp4" type="video/mp4">
+                    </video>
                 </p>
             </div>
         </div>
@@ -433,7 +435,7 @@ platforms).
 
 
                 <div class="card mb-4 mt-4 text-dark bg-light">
-                    <h5 class="card-header">Put the fruits into the top drawer</h5>
+                    <h5 class="card-header">Put the Fruits into the Top Drawer</h5>
                     <div class="card-body">
                         <p>Generated Language Plan (Click to view relevant part of video plan!):</p>
                         <select class="form-select" size="5" aria-label="size 5 select example">
@@ -466,8 +468,248 @@ platforms).
 
                     </div>
                 </div>
-                <!----- End block --->
+
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Stack Utensils, Cups, Bowls on Top of Each Other at the Center of the Table</h5>
+                    <div class="card-body">
+                        <p>Generated Language Plan (Click to view relevant part of video plan!):</p>
+                        <select class="form-select" size="5" aria-label="size 5 select example">
+                            <option value="aloha_1">
+                                1) Pick the pink bowl
+                            </option>
+                            <option value="aloha_2">
+                                2) Stack the pink bowl on top of the blue bowl
+                            </option>
+                            <option value="aloha_3">
+                                3) Pick up the orange cup
+                            </option>
+                            <option value="aloha_4">
+                                4) Pick the blue cup
+                            </option>
+                            <option value="aloha_5">
+                                5) Stack the purple cup on the top of the orange cup
+                            </option>
+                            <option value="aloha_6">
+                                6) Pick the green cup
+                            </option>
+                            <option value="aloha_7">
+                                7) Stack the green cup on top of the blue cup
+                            </option>
+                            <option value="aloha_8">
+                                8) Pick the fork
+                            </option>
+                            <option value="aloha_9">
+                                9) Place the spoon in the cup
+                            </option>
+                            <option value="aloha_10">
+                                10) Pick the spoon
+                            </option>
+                            <option value="aloha_11">
+                                11) Place the spoon in the cup
+                            </option>
+                            <option value="aloha_12">
+                                12) Push the bowl to the center
+                            </option>
+                            <option value="aloha_13">
+                                13) Move the bowl to the center
+                            </option>
+                        </select>
+                        <br>
+                        <p>Generated Video Plan:</p>
+                        <div class="col-md-12 mb-2">
+                            <video id="vid_aloha" width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/aloha.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <div class="row">
+                            <p>
+                                Both language and video plans are generated and stitched together through tree search. All four videos are simultaneously generated.
+                            </p>
+                        </div>
+
+                    </div>
                 </div>
+                <!----- End block --->
+
+
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center mt-4">
+            <div class="col-md-10 col-lg-8">
+                <h3>Effect of Planning on Task Completion</h3>
+                <p>We next analyze the effect of planning on the synthesis of long-horizon video plans. Below, we compare a generated video plan with no planning compared to extensive planning. Extensive planning is required for effective synthesis of long-horizon videos.</p>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Make a Line</h5>
+                    <div class="card-body">
+                        <p>Generated Video Plan (No Search):</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/no_plan.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                        <p>Generated Video Plan (Extensive Search):</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/plan.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center mt-4">
+            <div class="col-md-10 col-lg-8">
+                <h3>Real Executions</h3>
+                <p>Synthesized long horizon plans can be directly converted to policy execution using a goal-conditioned policy. We illustrate executions of different long-horizon tasks below. </p>
+                
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Make a Line</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/line_real_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Make a Line</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/line_sim_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Group Blocks by Color</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/pair_real_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Group Blocks by Color</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/group_sim_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Move Blocks to the Top Right Corner</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/area_real_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Move Blocks to the Bottom Left Corner</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/area_sim_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Put the Fruits into the Top Drawer</h5>
+                    <div class="card-body">
+                        <p>Video of Execution:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/fractal_execution.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row justify-content-md-center mt-4">
+            <div class="col-md-10 col-lg-8">
+                <h3>Generalization</h3>
+                <p>VLP decouples action prediction into visual goal generation followed by goal-conditioned policy prediction. This abstraction enables VLP to different visual inputs -- the goal-conditioned policy simply to has to focus on the relevant visual parts of visual goal. </p>
+
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Generalization to New Objects</h5>
+                    <div class="card-body">
+                        <p>VLP is able to execute the long-horizon task "move blocks to the top right corner" on three new objects (rubber donut, cupake and wooden yellow hexagon):</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/object.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Generalization to New Lighting Conditions</h5>
+                    <div class="card-body">
+                        <p>VLP is able to execute the long-horizon task "move blocks to the bottom right corner" on a robot moved to a new office with substantially different lighting conditions (much more sunshine on the right side of the board):</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/light.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
+                <p>Both text-to-video models and VLMs in VLP can be trained using a wealth of internet knowledge. This also allows VLP to generalize to new tasks without any explicit training. </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center mt-4">
+            <div class="col-md-10 col-lg-8">
+                <h3>Limitations</h3>
+                <p>VLP is several limitations. First, the physics of objects may not be accurately preserved (as illustrated by several of the synthesized video plans above) and objects may suddenly disappear and appear. Furthermore, world knowledge may not be correctly transferred to new tasks. Below, we show a video plan were internet knowledge is inaccurately transferred. </p>
+
+                <div class="card mb-4 mt-4 text-dark bg-light">
+                    <h5 class="card-header">Pick up Octopus Toy</h5>
+                    <div class="card-body">
+                        <p>Generated Video Plan:</p>
+                        <div class="col-md-12 mb-2">
+                            <video width="100%" preload="metadata" playsinline controls>
+                                <source src="videos/octopus.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
         
